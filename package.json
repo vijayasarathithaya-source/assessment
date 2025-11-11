@@ -2,6 +2,7 @@
   "name": "github-repos-list",
   "version": "1.0.0",
   "description": "React app to list most starred GitHub repos from last 10 days",
+  "homepage": "https://vijayasarathithaya-source.github.io/assessment",
   "scripts": {
     "dev": "vite --mode dev",
     "dev:sit": "vite --mode sit",
@@ -11,7 +12,8 @@
     "build:sit": "vite build --mode sit",
     "build:preprod": "vite build --mode preprod",
     "build:prod": "vite build --mode prod",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.2.0",
@@ -22,10 +24,10 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.3.0",
     "sass": "^1.69.5",
     "sass-embedded": "^1.69.5",
     "typescript": "^5.3.3",
     "vite": "^5.0.8"
   }
 }
-

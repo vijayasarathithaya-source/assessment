@@ -1,0 +1,60 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.btn {
+  @include button-base;
+  border: none;
+  cursor: pointer;
+  transition: all $transition-fast;
+  font-weight: $font-weight-medium;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  // Variants
+  &.btn-primary {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover:not(:disabled) {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $color-border;
+    color: $color-text-primary;
+
+    &:hover:not(:disabled) {
+      background-color: darken($color-border, 10%);
+    }
+  }
+
+  &.btn-danger {
+    background-color: $color-error;
+    color: $color-white;
+
+    &:hover:not(:disabled) {
+      background-color: darken($color-error, 10%);
+    }
+  }
+
+  // Sizes
+  &.btn-sm {
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-sm;
+  }
+
+  &.btn-md {
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-base;
+  }
+
+  &.btn-lg {
+    padding: $spacing-md $spacing-lg;
+    font-size: $font-size-lg;
+  }
+}
+

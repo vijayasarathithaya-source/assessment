@@ -1,0 +1,70 @@
+@use './variables' as *;
+@use './animations' as *;
+
+// Responsive mixin
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+// Button base styles
+@mixin button-base {
+  padding: 0.75rem 1.5rem;
+  font-size: $font-size-base;
+  border: none;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: background-color $transition-fast;
+  font-weight: $font-weight-medium;
+
+  &:hover {
+    background-color: $color-primary-hover;
+  }
+
+  &:focus {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+    cursor: not-allowed;
+  }
+}
+
+// Card base styles
+@mixin card-base {
+  background-color: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  transition: box-shadow $transition-fast, transform $transition-fast;
+}
+
+// Focus styles
+@mixin focus-outline {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}
+
+// Animation mixins
+@mixin fade-in($duration: $transition-fast) {
+  animation: fadeIn $duration ease-in-out;
+}
+
+@mixin slide-up($duration: $transition-base) {
+  animation: slideUp $duration ease-out;
+}
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+

@@ -1,0 +1,24 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.error-message {
+  background-color: $color-error-bg;
+  border: 1px solid $color-error-border;
+  border-radius: $radius-sm;
+  padding: $spacing-lg;
+  margin: $spacing-xl 0;
+  text-align: center;
+}
+
+.error-content {
+  @include flex-column;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.error-text {
+  color: $color-error;
+  font-size: $font-size-base;
+  margin: 0;
+}
+

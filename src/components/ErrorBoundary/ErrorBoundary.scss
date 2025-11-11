@@ -1,0 +1,29 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.error-boundary {
+  @include flex-center;
+  min-height: 50vh;
+  padding: $spacing-xl;
+}
+
+.error-boundary-content {
+  text-align: center;
+  max-width: 500px;
+  @include flex-column;
+  gap: $spacing-lg;
+}
+
+.error-boundary-title {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-semibold;
+  color: $color-error;
+  margin: 0;
+}
+
+.error-boundary-message {
+  font-size: $font-size-base;
+  color: $color-text-secondary;
+  margin: 0;
+}
+

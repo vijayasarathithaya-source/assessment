@@ -1,0 +1,56 @@
+@use '../../styles/variables' as *;
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $color-white;
+  border-top: 1px solid $color-border;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0;
+  z-index: 100;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: color $transition-fast;
+  color: $color-text-secondary;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &:focus {
+    outline: 2px solid $color-primary;
+    outline-offset: -2px;
+    border-radius: $radius-sm;
+  }
+
+  &.active {
+    color: $color-primary;
+  }
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.nav-label {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+}
+

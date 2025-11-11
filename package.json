@@ -1,0 +1,31 @@
+{
+  "name": "github-repos-list",
+  "version": "1.0.0",
+  "description": "React app to list most starred GitHub repos from last 10 days",
+  "scripts": {
+    "dev": "vite --mode dev",
+    "dev:sit": "vite --mode sit",
+    "dev:preprod": "vite --mode preprod",
+    "build": "vite build --mode prod",
+    "build:dev": "vite build --mode dev",
+    "build:sit": "vite build --mode sit",
+    "build:preprod": "vite build --mode preprod",
+    "build:prod": "vite build --mode prod",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "sass": "^1.69.5",
+    "sass-embedded": "^1.69.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8"
+  }
+}
+
